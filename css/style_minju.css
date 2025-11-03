@@ -1,0 +1,507 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Orbitron:wght@400..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    display: block;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+li{
+    list-style: none;
+}
+.clearfix::after .clearfix::before{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* body */
+body {
+overflow-x: hidden;
+}
+
+#header {}
+#menu{}
+#footer{}
+
+.container{
+    width: 100%;
+    height: inherit;
+    margin: 0 auto;
+}
+
+/* header */
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: radial-gradient(circle, #ffffff 0%, #fff 30%, #d6dcea 100%);
+    position: relative;
+}
+.header > .banner {
+   position: relative;
+   width: 100%;
+   height: 100px;
+
+}
+.header > .banner  > div{
+}
+.header > .banner > article{
+   position: absolute;
+   top: 50%;
+   right: 1%;
+   display: flex;
+}
+.header >.banner > article > .login >a>img {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.header > .banner > article > .cart >a>img{
+    width: 20px;
+    height: 20px;
+
+}
+
+/* hamburger */
+.header >.banner > .hamburger{
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    z-index: 10;
+    cursor: pointer;
+
+}
+.header >.banner > .hamburger > .h_bar{
+    width: 50px;
+    height: 3px;
+    background-color: #808083;
+    float: left;
+}
+.header > .banner > .hamburger > .h_bar::before{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #808083;
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+.header>.banner > .hamburger > .h_bar::after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #808083;
+    position: absolute;
+    top: 16px;
+    left: 0;
+}
+.header>.banner > .nav{
+    width: 280px;
+    height: 400px;
+    /* transform: translateY(-120%); */
+    position:absolute ;
+    top: 90px;
+    left: -300px;
+    z-index: 100;
+    transition: all 0.3s;
+    background-color: rgba(0,0,0,0.2);
+
+}
+.header>.banner > .nav.open{
+    left: 0;
+    display: block;
+    /* transform: translateY(0%); */
+
+    
+
+    
+}
+.header>.banner > .nav > ul{
+    padding: 13px;
+}
+.header>.banner > .nav > ul >li{
+    margin-top: 10px;
+    font-family: "Cormorant Garamond", serif;
+    
+
+
+}
+.header>.banner > .nav > ul > li:nth-of-type(6){
+    margin-top: 0;
+}
+
+.header>.banner > .nav > ul > li:nth-of-type(5){
+    padding-top: 40px;
+}
+.header>.banner > .nav > ul > li a{
+    display: block;
+    font-size: 26px;
+    color: #fff;
+    padding-left: 10px;
+
+
+}
+
+.header > .avata_wrapper{
+    position: absolute;
+    top: 20%;
+    left: 45%;
+}
+
+
+
+.header > .avata_section{
+}
+.header > .avata_section > .items{}
+.header > .avata_section > .items > .item1{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 9;
+}
+.header > .avata_section > .items > .item2{
+    position: absolute;
+    bottom: 70%;
+    right: 4%;
+}
+.header > .avata_section > .items > .item3{
+    position: absolute;
+    bottom: 14%;
+    right: 4%;
+}
+.header > .avata_section > .items > .item4{
+    position: absolute;
+    bottom: 25%;
+    left: 5%;
+}
+.header > .avata_section > .items > .item5{
+    position: absolute;
+    top: 5%;
+    right:30%;
+}
+.header > .avata_section > .items > .item6{
+    position: absolute;
+    top: 30%;
+    left: 25%;
+}
+.header > .avata_section > .items > .item7{
+    position: absolute;
+    bottom: 5%;
+    right: 30%;
+}
+.header > .avata_section > .items > .item8{
+    position: absolute;
+    top: 40%;
+    right: 20%;
+}
+.header > .avata_section > .items > .item9{
+    position: absolute;
+    bottom: 15%;
+    left: 25%;
+}
+/* 입혀지는 아이템이 올라오는 위치 */
+.header > .avata_wrapper > .avata{
+    position: relative;
+
+}
+.header > .avata_section > .items >img,
+.header > .avata_section > .items_a > img{
+}
+
+/* 올라오는 옷 */
+.header > .avata_section > .items_a > .itema1{
+    position: absolute;
+    top: 38.6%;
+    left: 45.4%;
+}
+.header > .avata_section > .items_a > .itema2{
+    position: absolute;
+    top: 52%;
+    left: 45.6%;
+}
+.header > .avata_section > .items_a > .itema3{
+    position: absolute;
+    bottom: 20%;
+    left: 41.5%;
+}
+.header > .avata_section > .items_a > .itema4{
+    position: absolute;
+    bottom: 19%;
+    left: 42.2%;
+}
+.header > .avata_section > .items_a > .itema5{
+    position: absolute;
+    top: 19.2%;
+    left: 46.1%;
+}
+.header > .avata_section > .items_a > .itema6{
+    position: absolute;
+    top: 19.5%;
+    left: 45.8%;
+}
+.header > .avata_section > .items_a > .itema7{
+    position: absolute;
+    top: 38.1%;
+    left: 46.6%;
+}
+.header > .avata_section > .items_a > .itema8{
+    position: absolute;
+    top: 36.5%;
+    left: 45.3%;
+}
+.header > .avata_section > .items_a > .itema9{
+    position: absolute;
+    top: 52%;
+    left: 46%;
+}
+
+/* menu */
+.menu {
+    width: 100%;
+    /* background-color: #eeeff3; */
+    display: flex;
+    flex-wrap: wrap;
+    display: none;
+    /* 잠깐 숨김 */
+}
+.menu.active { display: flex; /* 보이는 메뉴는 flex나 block */ }
+
+.menu > div{
+    position: relative;
+    width: 100%;
+    height: inherit;
+}
+.menu > div::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0,0,0,0.1); */
+    background-color: #a3abb8;
+    opacity: 0;
+}
+.menu > div:hover::before{
+    background-color: #a3abb8;
+    opacity: 0.4;
+}
+.menu > div > a >img{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+}
+.menu > div > span{
+    display: block;
+    height: 50px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 800;
+    text-align: center;
+    /* line-height: 500%; */
+}
+
+.menu > div > p{
+    display: none;
+}
+    
+.menu > div:hover > p{
+    display: block;
+    position: absolute;
+    top: 41%;
+    left: 30%;
+    font-size: 43px;    
+    font-family: "Cormorant Garamond", serif;
+}
+
+.menu>.box1 {
+    width: 25%;
+    height: auto;
+    border: 1px solid #000;
+    overflow: hidden;
+}
+.menu>.box2 {
+    width: 25%;
+    height: auto;
+    /* background-color: brown; */
+    border: 1px solid #000;
+    border-left: none;
+    overflow: hidden;
+}
+.menu>.box3 {
+    width: 25%;
+    height: auto;
+    /* background-color: brown; */
+    border: 1px solid #000;
+    border-left: none;
+    overflow: hidden;
+}
+.menu>.box4 {
+    width: 25%;
+    height: auto;
+    /* background-color: brown; */
+    border: 1px solid #000;
+    border-left: none;
+    overflow: hidden;
+}
+.menu>.box5 {
+    width: 25%;
+    height: auto;
+    /* background-color: brown; */
+    border: 1px solid #000;
+    border-top: none;
+    overflow: hidden;
+}
+.menu>.box6 {
+    width: 25%;
+    height: auto;
+    /* background-color: brown; */
+    border: 1px solid #000;
+    border-left: none;
+    border-top: none;
+    overflow: hidden;
+}
+.menu>.box7 {
+    width: 25%;
+    height: auto;
+    /* background-color: brown; */
+    border: 1px solid #000;
+    border-left: none;
+    border-top: none;
+    overflow: hidden;
+}
+.menu>.box8 {
+    width: 25%;
+    height: auto;
+    /* background-color: brown; */
+    border: 1px solid #000;
+    border-left: none;
+    border-top: none;
+    overflow: hidden;
+}
+.menu>.box9 {
+    width: 25%;
+    height: auto;
+    /* background-color: brown; */
+    border: 1px solid #000;
+    border-top: none;
+    overflow: hidden;
+}
+.menu>.box10 {
+    width: 25%;
+    height: auto;
+    border: 1px solid #000;
+    border-left: none;
+    border-top: none;
+    overflow: hidden;
+}
+.menu>.box11 {
+    width: 25%;
+    height: auto;
+    border: 1px solid #000;
+    border-left: none;
+    border-top: none;
+    overflow: hidden;
+}
+.menu>.box12 {
+    width: 25%;
+    height: auto;
+    border: 1px solid #000;
+    border-left: none;
+    border-top: none;
+    overflow: hidden;
+}
+.menu>.box13 {
+    width: 25%;
+    height: auto;
+    border: 1px solid #000;
+    border-left: none;
+    border-top: none;
+    overflow: hidden;
+}
+.menu>.box14 {
+    width: 25%;
+    height: auto;
+    border: 1px solid #000;
+    border-left: none;
+    border-top: none;
+    overflow: hidden;
+}
+.menu>.box15 {
+    width: 25%;
+    height: auto;
+    border: 1px solid #000;
+    border-left: none;
+    border-top: none;
+    overflow: hidden;
+}
+.menu>.box16 {
+    width: 25%;
+    height: auto;
+    border: 1px solid #000;
+    border-left: none;
+    border-top: none;
+    overflow: hidden;
+}
+
+
+/* tab */
+.tab{
+    width: 100%;
+    height: 100px;
+    /* background-color: orange; */
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+}
+.tab > a{
+    margin-right: 10px;
+    font-size: 20px;
+    font-family: "Cormorant Garamond", serif;
+}
+
+.tab > a:nth-of-type(3){
+    font-size: 18px;
+}
+.tab > a:nth-of-type(4){
+    font-size: 17px;
+}
+.tab > a:nth-of-type(5){
+    font-size: 17px;
+}
+.tab a.active { 
+  font-weight: bold; 
+}
+.tab a.disabled {
+  pointer-events: none; /* 클릭 불가능 */
+  cursor: default;  
+}
+
+/* footer */
+.footer {
+    width: 100%;
+    height: 100px;
+    /* background-color: aqua; */
+    position: relative;
+}
+.footer > .s_mlogo > a > img{
+    width: 10%;
+    height: auto;
+    position: absolute;
+    top: 11%;
+    left: 45%;
+}
+
+

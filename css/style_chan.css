@@ -1,0 +1,374 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cormorant Garamond", serif;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+.clearfix::before,.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+/* 헤더 */
+#header{
+    width: 100%;
+    /* background-color: #fff; */
+    /* 스티키 */
+    position: relative;
+    z-index: 2;
+}
+/* 배너 좀 많이 길어요~! */
+#banner{
+    width: 100%;
+    height: 100vh;
+    background-color: #eaeeff;
+    /* display: flex;
+    justify-content: space-around; */
+    margin-top: -70px;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+/* 마네킹 얼굴 */
+#banner .face_viewer{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 500px;
+    height: 500px;
+}
+#banner .face_viewer .face{}
+#banner .face_viewer .face img{
+    width: 100%;
+    display: block;
+}
+/* 마네킹 눈 */
+#banner .face_viewer .contact_lens{}
+#banner .face_viewer .contact_lens ul{}
+#banner .face_viewer .contact_lens ul li{
+    position: absolute;
+    top: 187px;
+    left: 163px;
+    opacity: 1;
+}
+#banner .face_viewer .contact_lens ul li img{}
+#banner .face_viewer .contact_lens> ul> li.active{
+    opacity: 1;
+}
+/* 마네킹 눈썹 */
+#banner .face_viewer .eyebrows{}
+#banner .face_viewer .eyebrows ul{}
+#banner .face_viewer .eyebrows ul li{
+    position: absolute;
+    top: 142px;
+    left: 158px;
+    opacity: 1;
+}
+#banner .face_viewer .eyebrows ul li.active{
+    opacity: 1;
+}
+/* 마네킹 입술 */
+#banner .face_viewer .lips{}
+#banner .face_viewer .lips ul{}
+#banner .face_viewer .lips ul li{
+    position: absolute;
+    top: 273px;
+    left: 232px;
+    /* opacity: 0; */
+}
+#banner .face_viewer .lips ul li.active{
+    opacity: 1;
+}
+/* 오른쪽 아이템 선택창 */
+#banner .tabMenu{
+    box-shadow: 1px 1px 5px #ccc;
+    position: absolute;
+    top: 33%;
+    right: 18%;
+}
+/* 아이템 탭버튼(렌즈,눈썹,입술) */
+#banner .tabMenu .tabBtn{}
+#banner .tabMenu .tabBtn ul{}
+#banner .tabMenu .tabBtn ul li{
+    float: left;
+}
+#banner .tabMenu .tabBtn ul li.on{}
+#banner .tabMenu .tabBtn ul li.on a{
+    background-color: #f1f3fc;
+}
+#banner .tabMenu .tabBtn ul li a{
+    display: block;
+    font-size: 24px;
+    background-color: #eeeded;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+/* 아이템창 내부 색깔선택창 */
+#banner .tabMenu .tabCont{
+    width: 300px;
+    padding-left: 10px;
+    overflow: hidden;
+    background-color: #f1f3fc;
+}
+#banner .tabMenu .tabCont > article{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#banner .tabMenu .tabCont > article > div{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px 10px;
+    text-indent: -99999px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+#banner .tabMenu .tabCont > article > div.on1{
+    opacity: 1;
+}
+/* 절대 NO 건들!!!! */
+#banner .tabMenu .tabCont .cont_lens div:nth-of-type(1){
+    background-color: #4c2600e1;
+}
+#banner .tabMenu .tabCont .cont_lens div:nth-of-type(2){
+    background-color: #bc0101d6;
+}
+#banner .tabMenu .tabCont .cont_lens div:nth-of-type(3){
+    background-color: #6d6d0eda;
+}
+#banner .tabMenu .tabCont .cont_lens div:nth-of-type(4){
+    background-color: #55b95dd2;
+}
+#banner .tabMenu .tabCont .cont_lens div:nth-of-type(5){
+    background-color: #a150e7d8;
+}
+#banner .tabMenu .tabCont .cont_lens div:nth-of-type(6){
+    background-color: #c8038ad3;
+}
+#banner .tabMenu .tabCont .cont_lens div:nth-of-type(7){
+    background-color: #4d7900d8;
+}
+#banner .tabMenu .tabCont .cont_lens div:nth-of-type(8){
+    background-color: #e6c402ba;
+}
+#banner .tabMenu .tabCont .cont_lens div:nth-of-type(9){
+    background-color: #bfcdcf;
+}
+#banner .tabMenu .tabCont .cont_brows div:nth-of-type(1){
+    background-color: #4c2600e1;
+}
+#banner .tabMenu .tabCont .cont_brows div:nth-of-type(2){
+    background-color: rgba(255, 68, 0, 0.872);
+}
+#banner .tabMenu .tabCont .cont_brows div:nth-of-type(3){
+    background-color: pink;
+}
+#banner .tabMenu .tabCont .cont_brows div:nth-of-type(4){
+    background-color: rgba(255, 255, 0, 0.693);
+}
+#banner .tabMenu .tabCont .cont_brows div:nth-of-type(5){
+    background-color: rgba(213, 18, 213, 0.704);
+}
+#banner .tabMenu .tabCont .cont_brows div:nth-of-type(6){
+    background-color: rgba(128, 0, 128, 0.714);
+}
+#banner .tabMenu .tabCont .cont_brows div:nth-of-type(7){
+    background-color: rgba(128, 0, 128, 0.475);
+}
+#banner .tabMenu .tabCont .cont_brows div:nth-of-type(8){
+    background-color: greenyellow;
+}
+#banner .tabMenu .tabCont .cont_brows div:nth-of-type(9){
+    background-color: rgba(0, 128, 0, 0.678);
+}
+#banner .tabMenu .tabCont .cont_brows div:nth-of-type(10){
+    background-color: rgba(0, 0, 0, 0.726);
+}
+#banner .tabMenu .tabCont .cont_lips div:nth-of-type(1){
+    background-color: #4c2600e1;
+}
+#banner .tabMenu .tabCont .cont_lips div:nth-of-type(2){
+    background-color: orange;
+}
+#banner .tabMenu .tabCont .cont_lips div:nth-of-type(3){
+    background-color: pink;
+}
+#banner .tabMenu .tabCont .cont_lips div:nth-of-type(4){
+    background-color: rgba(255, 255, 0, 0.53);
+}
+#banner .tabMenu .tabCont .cont_lips div:nth-of-type(5){
+    background-color: rgba(0, 255, 0, 0.564);
+}
+#banner .tabMenu .tabCont .cont_lips div:nth-of-type(6){
+    background-color: greenyellow;
+}
+#banner .tabMenu .tabCont .cont_lips div:nth-of-type(7){
+    background-color: rgba(31, 176, 176, 0.767);
+}
+#banner .tabMenu .tabCont .cont_lips div:nth-of-type(8){
+    background-color: rgba(221, 160, 221, 0.691);
+}
+#banner .tabMenu .tabCont .cont_lips div:nth-of-type(9){
+    background-color: rgba(128, 0, 128, 0.663);
+}
+#banner .tabMenu .tabCont .cont_lips div:nth-of-type(10){
+    background-color: rgba(255, 0, 43, 0.712);
+}
+#banner .tabMenu .tabCont .cont_lips div:nth-of-type(11){
+    background-color: rgba(208, 0, 35, 0.767);
+}
+#banner .tabMenu .tabCont .cont_lips div:nth-of-type(12){
+    background-color: rgb(228, 120, 138);
+}
+/* 컨텐츠1,2,3 - id 하나로 통합 */
+#contents{
+    width: 100%;
+    background-color: #fff;
+    /* 스티키 */
+    position: relative;
+    z-index: 2;
+}
+/* 푸터 */
+#footer{
+    width: 100%;
+    background-color: #fff;
+    /* 스티키 */
+    z-index: 2;
+    position: relative;
+}
+/* .컨테이너 */
+.container{
+    margin: 0 auto;
+    width: 1280px;
+}
+/* .헤더 */
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.header .logo{
+    width: 200px;
+    height: 70px;
+    padding-top: 15px;
+}
+.header .logo a{
+    display: block;
+}
+.header .logo a img{
+    width: 100%;
+}
+/* .햄버거메뉴 */
+.hamburger{
+    width: 50px;
+    height: 30px;
+    /* background-color: #fff; */
+    position: absolute;
+    top: 40px;
+    left: 36px;
+    cursor: pointer;
+}
+.hamburger .h_bar{
+    width: 50px;
+    height: 3px;
+    background-color: #808083;
+}
+.hamburger .h_bar::before{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #808083;
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+.hamburger .h_bar::after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #808083;
+    position: absolute;
+    top: 16px;
+    left: 0;
+}
+#header .nav{
+    /* background-color: aqua; */
+    width: 290px;
+    height: 400px;
+    /* display: none; */
+    position: absolute;
+    top: 70px;
+    left: -350px;
+    transition: all .3s;
+}
+#header .nav.open{
+    display: block;
+    left: 35px;
+}
+#header .nav ul{
+    padding-top: 50px;
+}
+#header .nav ul li{}
+#header .nav ul li:nth-of-type(5){
+    padding-top: 65px;
+}
+#header .nav ul li a{
+    display: block;
+    font-size: 30px;
+    color: #808083;
+    padding-left: 10px;
+}
+/* .컨텐츠 통합사항 */
+.con{
+    padding-top: 100px;
+}
+.con .swiper{}
+.con .swiper .swiper-slide{
+    height: 400px;
+    background: radial-gradient(ellipse farthest-corner at center, #fff, #e6eaf2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.con .swiper .swiper-slide img{
+    width: 70%;
+    display: block;
+}
+/* .컨텐츠 개별사항 */
+.contents1{}
+.contents2{}
+.contents3{
+    padding-bottom: 100px;
+}
+/* .푸터 */
+.footer{
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .f_logo{
+    width: 180px;
+    height: 60px;
+}
+.footer .f_logo a{}
+.footer .f_logo a img{
+    width: 100%;
+    display: block;
+}

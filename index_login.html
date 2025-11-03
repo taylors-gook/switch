@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인창</title>
+    <link rel="stylesheet" href="./css/style_login.css">
+    <link rel="stylesheet" href="./css/media_login.css">
+</head>
+<body>
+    <section id="banner">
+        <div class="hamburger">
+            <div class="h_bar"></div>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="./index_minju.html">CUSTOM</a></li>
+                <li><a href="./index_chan.html">COSMETIC</a></li>
+                <li><a href="./index_sieun.html">COLLABORATION</a></li>
+                <li><a href="./index_hwan.html">HISTORY</a></li>
+                <li><a href="./index_login.html">MY ACCOUNT</a></li>
+                <li><a href="/index_cart2.html">CART</a></li>
+            </ul>
+        </nav>
+        <article>
+            <div class="login"><a href="/index_login.html"><img src="./img/login12.png" alt="login"></a></div>
+            <div class="cart"><a href="/index_cart2.html"><img src="./img/cart.png" alt="cart"></a></div>
+        </article>
+    </section>
+    
+    <div class="container">
+        <form id="Loginform">
+            <h2>LOGIN</h2>
+            <input type="text" id="loginID" placeholder="Login">
+            <input type="password" id="loginPW" placeholder="Password">
+            <a href="javascript:;">Forget your password?</a>
+            <input type="submit" value="Sign-in" class="go">
+            <input type="button" value="Join" class="go">
+        </form>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+    <script>
+        //삐삐삐
+         // 올바른 아이디 / 비밀번호 (예시)
+    const CORRECT_ID  = "switch";
+    const CORRECT_PW  = "2025";
+
+    document.getElementById("Loginform").addEventListener("submit", function(e) {
+        e.preventDefault(); 
+
+        //사용자 지정 ID/PW
+        const userId = document.getElementById("loginID").value.trim();
+        const userPw = document.getElementById("loginPW").value.trim();
+
+        // 값이 비었을 때
+        if (!userId && !userPw) {
+            alert("아이디와 비밀번호를 입력하세요");
+            return;
+        }
+        if (!userId) {
+            alert("아이디를 입력하세요");
+            return;
+        }
+        if (!userPw) {
+            alert("비밀번호를 입력하세요");
+            return;
+        }
+
+        // 값 일치 여부 체크
+        if (userId !== CORRECT_ID || userPw !== CORRECT_PW) {
+            alert("잘못 입력하셨습니다");
+            return;
+        }
+
+        // 성공
+        alert(userId + "님 반갑습니다!");
+        // location.href = "main.html";
+
+    });
+
+
+        <!-- 햄버거 -->
+        $(".hamburger").click(function (e) {
+            e.preventDefault();
+            $(".nav").toggleClass("open");
+        });
+        
+    </script>
+</body>
+</html>

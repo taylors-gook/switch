@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopping cart</title>
+    <link rel="stylesheet" href="./css/style_cart.css">
+</head>
+<body>
+    <!-- shopping cart -->
+    <div class="cart_backdrop" aria-hidden="true"></div>
+
+    <aside class="cart_panel" aria-hidden="true" role="dialog" aria-label="Shopping cart">
+    <header class="cart_header">
+        <h3 class="cart_title">Shopping Bag</h3>
+        <button type="button" class="cart_close_btn" aria-label="Close">X</button>
+    </header>
+    <div class="cart_body">
+        <!-- 여기에 장바구니 아이템 리스트 -->
+        <div class="cart_empty">Your bag is empty.</div>
+    </div>
+    <footer class="cart_footer">
+        <a href="javascript:;" class="cart_view_btn">View Bag</a>
+        <a href="javascript:;" class="cart_checkout_btn">Checkout</a>
+    </footer>
+    </aside>
+
+    <script>
+        //shopping cart 
+        function lockBodyScroll(){
+        const y = window.scrollY || document.documentElement.scrollTop;
+        document.body.dataset.scrollY = y;
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${y}px`;
+        document.body.style.left = '0';
+        document.body.style.right = '0';
+        document.body.style.width = '100%';
+        }
+        function unlockBodyScroll(){
+        const y = parseInt(document.body.dataset.scrollY || '0', 10);
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.left = '';
+        document.body.style.right = '';
+        document.body.style.width = '';
+        window.scrollTo(0, y);
+        delete document.body.dataset.scrollY;
+        }
+
+        // 열기/닫기
+        const $cartPanel    = $('.cart_panel');
+        const $cartBackdrop = $('.cart_backdrop');
+
+        // 아이콘 클릭 시 열기
+        $('.header article .cart a, .header article .cart a img').on('click', function(){
+        $cartPanel.addClass('cart_open').attr('aria-hidden','false');
+        $cartBackdrop.addClass('cart_open').attr('aria-hidden','false');
+        lockBodyScroll();
+        });
+
+        // 닫기 (X버튼/ESC)
+        $('.cart_close_btn, .cart_backdrop').on('click', closeCart);
+        $(document).on('keydown', function(e){
+        if(e.key === 'Escape'){ closeCart(); }
+        });
+
+        function closeCart(){
+        $cartPanel.removeClass('cart_open').attr('aria-hidden','true');
+        $cartBackdrop.removeClass('cart_open').attr('aria-hidden','true');
+        unlockBodyScroll();
+        }
+    </script>
+</body>
+</html>

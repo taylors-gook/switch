@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+@media(max-width:1850px){}
+@media(max-width:1024px){
+    main >img{
+        width: 130%;
+    }
+    main >span{
+        font-size: 30px;
+        display: block;
+        margin-top: 25px;
+        padding-left: 22%;
+        width: 130%;
+}
+}
+@media(max-width:768px){
+     #banner>.hamburger>.h_bar {
+            width: 40px;
+        }
+
+        #banner>.hamburger>.h_bar::before {
+            width: 40px;
+        }
+
+        #banner>.hamburger>.h_bar::after {
+            width: 40px;
+        }
+     #banner>.nav.open {
+            left: 15px;
+        }
+        #banner>.nav>ul>li a {
+            font-size: 20px;
+            padding-left: 10px;
+        }
+        main {
+            top: 39%;
+            left: 38%;
+        }
+
+        main>img {
+            width: 110%;
+        }
+
+        main>span {
+            font-size: 22px;
+            display: block;
+            margin-top: 25px;
+            padding-left: 17%;
+            width: 110%;
+        }
+}
+@media(max-width:600px){
+     #banner>.hamburger>.h_bar {
+            width: 35px;
+            height: 2px;
+        }
+        #banner>.hamburger>.h_bar::before {
+            width: 35px;
+            height: 2px;
+        }
+        #banner>.hamburger>.h_bar::after {
+            width: 35px;
+            height: 2px;
+        }
+        #banner>.nav {
+            top: 70px;
+        }
+        #banner>.nav.open {
+            left: 0px;
+        }
+        #banner>.nav>ul>li a {
+            font-size: 18px;
+        }
+        main {
+            top: 42%;
+            left: 34%;
+        }
+        main>img {
+            width: 100%;
+        }
+        main>span {
+            font-size: 18px;
+            display: block;
+            margin-top: 25px;
+            padding-left: 19%;
+            width: 100%;
+        }
+}
+@media(max-width:480px){
+    #banner>.nav>ul>li:nth-of-type(5) {
+        padding-top: 0px;
+    }
+    #banner>.nav>ul>li:nth-of-type(6) {
+        margin-top: 10px;
+    }
+    main {
+            top: 42%;
+            left: 28%;
+        }
+        main>img {
+            width: 100%;
+        }
+        main>span {
+            font-size: 18px;
+            display: block;
+            margin-top: 25px;
+            padding-left: 19%;
+            width: 100%;
+        }
+}
+@media(max-width:430px){}
+@media(max-width:380px){}

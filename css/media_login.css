@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+@media(max-width:1850px){   }
+@media(max-width:1024px){}
+@media(max-width:768px){
+    .container>form>h2 {
+            font-size: 52px;
+        }
+        .container>form>input[type="submit"] {
+            width: 45%;
+        }
+        .container>form>input[type="button"] {
+            width: 45%;
+        }
+        #banner>.hamburger>.h_bar {
+            width: 40px;
+        }
+
+        #banner>.hamburger>.h_bar::before {
+            width: 40px;
+        }
+
+        #banner>.hamburger>.h_bar::after {
+            width: 40px;
+        }
+        #banner>.nav.open {
+            left: 15px;
+        }
+        #banner>.nav>ul>li a {
+            font-size: 20px;
+            padding-left: 10px;
+        }
+
+}
+@media(max-width:600px){
+        .container>form>h2 {
+            font-size: 48px;
+        }
+        .container>form>input {
+            width: 80%;
+        }
+        .container>form>a {
+            font-size: 15px;
+            padding: 30px 0 20px 0;
+        }
+        .container>form>input[type="text"]{
+            font-size: 15px;
+            margin-top: 60px;
+        }
+        .container>form>input[type="password"] {
+            font-size: 15px;
+        }
+        .container>form>input[type="submit"] {
+            width: 45%;
+        }
+        .container>form>input[type="button"] {
+            width: 45%;
+        }
+        #banner>.hamburger>.h_bar {
+            width: 35px;
+            height: 2px;
+        }
+        #banner>.hamburger>.h_bar::before {
+            width: 35px;
+            height: 2px;
+        }
+        #banner>.hamburger>.h_bar::after {
+            width: 35px;
+            height: 2px;
+        }
+        #banner>.nav {
+            top: 70px;
+        }
+        #banner>.nav.open {
+            left: 0px;
+        }
+        #banner>.nav>ul>li a {
+            font-size: 18px;
+        }
+}
+@media(max-width:480px){
+    #banner>.nav>ul>li:nth-of-type(5) {
+        padding-top: 0px;
+    }
+    #banner>.nav>ul>li:nth-of-type(6) {
+        margin-top: 10px;
+    }
+}
+@media(max-width:430px){
+        .container>form>h2 {
+            font-size: 46px;
+        }
+        .container>form>input {
+            width: 70%;
+        }
+        .container>form>a {
+            font-size: 15px;
+            padding: 30px 0 20px 0;
+        }
+        .container>form>input[type="text"]{
+            margin-top: 50px;
+            font-size: 15px;
+
+        }
+        .container>form>input[type="password"] {
+            font-size: 15px;
+        }
+        .container>form>input[type="submit"] {
+            width: 41%;
+        }
+        .container>form>input[type="button"] {
+            width: 41%;
+        }
+}
+@media(max-width:380px){
+        .container>form>h2 {
+            font-size: 38px;
+        }
+        .container>form>input {
+            width: 60%;
+        }
+        .container>form>a {
+            font-size: 13px;
+            padding: 30px 0 20px 0;
+        }
+        .container>form>input[type="text"]{
+            margin-top: 50px;
+            font-size: 13px;
+        }
+        .container>form>input[type="password"] {
+            font-size: 13px;
+        }
+        .container>form>input[type="submit"] {
+            width: 37%;
+            font-size: 13px;
+ 
+        }
+        .container>form>input[type="button"] {
+            width: 37%;
+            font-size: 13px;
+
+        }
+}

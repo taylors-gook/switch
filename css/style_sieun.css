@@ -1,0 +1,308 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+@font-face {
+     font-family: 'S-CoreDream-3Light';
+     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+img{
+    display: block;
+}
+body{
+    font-family: "Cormorant Garamond";
+    background-color: #d6dcea;
+    /* background-image: radial-gradient(circle, #ffffff 0%, #fff 80%, #ffffff 100%) blur 0.5; */
+    background: radial-gradient(circle at center, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 60%) #dbe3f4;
+}
+#wrap_1{
+    height: 100vh;
+}
+#header{}
+.hamburger{
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    top: 3%;
+    left: 15px;
+    z-index: 10;
+    cursor: pointer;
+}
+.hamburger .h_bar{
+    width: 50px;
+    height: 3px;
+    background-color: #808083;
+}
+.hamburger .h_bar::before{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #808083;
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+.hamburger .h_bar::after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #808083;
+    position: absolute;
+    top: 16px;
+    left: 0;
+}
+.menu{
+    display: flex;
+    position: absolute;
+    top: 3%;
+    right: 2%;
+    z-index: 100;
+}
+#header .nav{
+    width: 290px;
+    height: 400px;
+    /* transform: translateX(-120%); */
+    /* display: none; */
+    z-index: 9;
+    position: absolute;
+    top: 70px;
+    left: -300px;
+    transition: all 0.3s;
+    background-color: rgba(0,0,0,0.2);
+}
+#header .nav.open{
+    /* transform: translateX(0); */
+    display: block;
+    left: 0;
+}
+#header .nav ul{
+    padding: 14px;
+}
+#header .nav ul li{
+    margin-top: 10px;
+}
+#header .nav ul li:nth-of-type(6){
+    margin-top: 0;
+}
+
+#header .nav ul li:nth-of-type(5){
+    padding-top: 40px;
+}
+#header .nav ul li a{
+    display: block;
+    font-size: 26px;
+    color: #808083;
+    padding-left: 10px;
+    color: white;
+}
+#header div a img{
+    width: 100%;
+}
+#header .login{
+    margin-right: 20px;
+    width: 20px;
+}
+#header .cart{
+    display: inline-block;
+    width: 24px;
+}
+#photo{width: 100%;height: 100vh;position: relative;overflow: hidden;}
+#photo .main{}
+#photo .sub{}
+#photo .box1{
+    position: absolute;
+    top: 30vh; left: 42vw;
+}
+#photo .box2{
+    position: absolute;
+    top: 5.9vh; left: 30.7vw;
+}
+#photo .box3{
+    position: absolute;
+    top: 34.9vh; left: 21.4vw;
+    z-index: 10; 
+}
+#photo .box4{
+    position: absolute;
+    top: 72.9vh; left: 27.3vw; 
+}
+#photo .box5{
+    position: absolute;
+    top: 62.5vh; left: 65.1vw;  
+}
+#photo .box6{
+    position: absolute;
+    top: 12vh; left: 62.3vw; 
+}
+#photo .box7{
+    position: absolute;
+    top: 12vh; left: 3.9vw;
+}
+#photo .box8{
+    position: absolute;
+    top: 64.2vh; left: 3.0vw;  
+}
+/* #photo .box9{
+    position: absolute;
+    top: 90.6vh; left: 75.5vw;  
+} */
+#photo .box10{
+    position: absolute;
+    top: 70vh; left: 88vw; 
+}
+#photo .box11{
+    position: absolute;
+    top: 22vh; left: 88vw;  
+}
+/* #photo .low_logo{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#photo .footer a{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#photo .footer a img{
+    width: 150px;
+    height: 50px;
+} */
+
+#footer{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#footer a{}
+#footer a img{
+    width: 150px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,0%);
+}
+
+
+
+#light_box{
+    width: 100%;
+}
+.light_box{
+    width: clamp(320px, 48vw, 560px);
+    height: auto;
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: clamp(8px, 2vw, 20px)
+}
+.light_box .tit{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    font-family: "Cormorant Garamond", serif;
+}
+.light_box .middel_tit{
+    text-align: center;
+    font-weight: 400;
+    font-size: 40px;
+    margin-top: 50px;
+    font-family: "Cormorant Garamond", serif;
+}
+.light_box .middel_tit span{
+    display: block;
+}
+.light_box .middel_tit span p{
+    font-size: 20px;
+    display: inline-block;    
+}
+.light_box .main_tit{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 100;
+    font-family: "Cormorant Garamond", serif;
+    margin-top: 50px;
+}
+.light_box .main_tit span{
+    display: block;
+    margin: 30px 0px 20px 0px;
+}
+.light_box .main_tit span b{
+    font-weight: 900;
+    font-size: 28px;
+}
+.light_box .main_tit .logo{
+    width: 100%;
+    width: 85px;
+}
+.light_box .btn_close{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+
+
+/* 미디어에서 글자 떨어짐 방지를 위한 스타일 조정 */
+#wrap_2, 
+#wrap_2 *{
+  word-break: keep-all;      /* 한글 단어 중간 끊김 방지 */
+  overflow-wrap: break-word; /* 진짜 긴 단어만 줄바꿈 */
+  white-space: normal;       /* 혹시 nowrap 걸려 있으면 해제 */
+  letter-spacing: normal;    /* vw 자간 쓰면 과도하게 벌어짐 → 초기화 */
+}
+#wrap_2 .tit{ 
+  font-size: clamp(28px, 4vw, 50px);  
+  line-height: 1.15;
+  text-align: center;
+}
+#wrap_2 .middel_tit{ 
+  font-size: clamp(20px, 3.2vw, 40px); 
+  line-height: 1.25;
+  text-align: center;
+}
+#wrap_2 .middel_tit span p{ 
+  display: inline;
+  font-size: clamp(14px, 1.4vw, 20px); 
+}
+#wrap_2 .main_tit{ 
+  font-size: clamp(14px, 1.6vw, 25px);
+  line-height: 1.5;
+  text-align: center;
+}
+#wrap_2 .main_tit b{ 
+  font-weight: 900; 
+  font-size: clamp(16px, 1.8vw, 28px);
+}
+
+#wrap_2 .main_tit .logo{
+  width: clamp(64px, 10vw, 85px);
+  display: inline-block;
+}
